@@ -2,9 +2,11 @@ from django.db import models
 
 
 class Event(models.Model):
+    STATE_PUBLISHED = 1
+    STATE_UNPUBLISHED = 2
     STATES = (
-        (1, 'Published'),
-        (2, 'Unpublished')
+        (STATE_PUBLISHED, 'Published'),
+        (STATE_UNPUBLISHED, 'Unpublished')
     )
 
     title = models.CharField(max_length=200)
@@ -14,7 +16,7 @@ class Event(models.Model):
     state = models.IntegerField(choices=STATES)
 
     def __str__(self):
-        return self.title + "_" + self.date
+        return self.title
 
 
 class EventSubscription(models.Model):
@@ -24,4 +26,4 @@ class EventSubscription(models.Model):
     comment = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.name + "_" + self.event
+        return self.email + "_" + self.event

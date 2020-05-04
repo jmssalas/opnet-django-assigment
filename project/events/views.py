@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.views import generic
 
-# Create your views here.
+from .models import Event
+
+
+class IndexView(generic.ListView):
+    template_name = 'events/index.html'
+    context_object_name = 'events_list'
+
+    def get_queryset(self):
+        """Return the published events."""
+        return Event.objects.filter(state=Event.STATE_PUBLISHED)
