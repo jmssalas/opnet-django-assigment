@@ -1,9 +1,0 @@
-{% if events_list %}
-    <ul>
-    {% for event in events_list %}
-        <li><a href="/events/{{ event.id }}/">{{ event.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}

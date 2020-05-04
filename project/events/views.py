@@ -3,9 +3,16 @@ from django.views import generic
 from .models import Event
 
 
-class IndexView(generic.ListView):
-    template_name = 'events/index.html'
-    context_object_name = 'events_list'
+class EventListView(generic.ListView):
+    model = Event
+
+    def get_queryset(self):
+        """Return the published events."""
+        return Event.objects.filter(state=Event.STATE_PUBLISHED)
+
+
+class EventDetailView(generic.DetailView):
+    model = Event
 
     def get_queryset(self):
         """Return the published events."""
