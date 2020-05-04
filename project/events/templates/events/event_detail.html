@@ -1,1 +1,19 @@
 <h1>{{ event.title }}</h1>
+<p>Description: {{ event.description }}</p>
+<p>Date: {{ event.date }}</p>
+<p>Author: {{ event.author }}</p>
+
+<hr>
+
+<p>Please, fill out the form to subscribe: </p>
+<form action="{% url 'events:subscribe' event.id %}" method="post">
+{% csrf_token %}
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <label for="comment">Comment:</label><br>
+    <input type="text" id="comment" name="comment"><br>
+<input type="submit" value="Subscribe">
+</form>
+
