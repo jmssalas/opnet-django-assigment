@@ -1,0 +1,21 @@
+{% load i18n %}
+{% block content %}
+<h1>{{ event.title }}</h1>
+<p>{% trans "Event Description" %}: {{ event.description }}</p>
+<p>{% trans "Event Date" %}: {{ event.date }}</p>
+<p>{% trans "Event Author" %}: {{ event.author }}</p>
+
+<hr>
+
+<p>{% trans "Event Subscription Paragraph" %}</p>
+<form action="{% url 'events:subscribe' event.id %}" method="post">
+{% csrf_token %}
+    <label for="name">{% trans "Event Subscription Name" %}:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">{% trans "Event Subscription Email" %}:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <label for="comment">{% trans "Event Subscription Comment" %}:</label><br>
+    <input type="text" id="comment" name="comment"><br>
+<input type="submit" value="Subscribe">
+</form>
+{% endblock %}

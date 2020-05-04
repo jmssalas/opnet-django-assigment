@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-04 19:13+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: project/settings.py:110
+msgid "EN"
+msgstr "Traducción en inglés"
+
+#: project/settings.py:111
+msgid "ES"
+msgstr "Traducción en español"
+
+#: templates/events/event_detail.html:4
+msgid "Event Description"
+msgstr "Descripción"
+
+#: templates/events/event_detail.html:5
+msgid "Event Date"
+msgstr "Fecha"
+
+#: templates/events/event_detail.html:6
+msgid "Event Author"
+msgstr "Autor"
+
+#: templates/events/event_detail.html:10
+msgid "Event Subscription Paragraph"
+msgstr "Por favor, rellene el formulario para subscribirse"
+
+#: templates/events/event_detail.html:13
+msgid "Event Subscription Name"
+msgstr "Nombre"
+
+#: templates/events/event_detail.html:15
+msgid "Event Subscription Email"
+msgstr "Email"
+
+#: templates/events/event_detail.html:17
+msgid "Event Subscription Comment"
+msgstr "Comentario"
+
+#: templates/events/event_list.html:3
+msgid "Event list"
+msgstr "Esta es la lista de eventos publicados"
+
+#: templates/events/event_list.html:11
+msgid "No events are available"
+msgstr "No hay eventos publicados"
