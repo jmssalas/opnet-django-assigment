@@ -1,5 +1,6 @@
 from django.urls import reverse_lazy
 from django.views import generic
+from django.shortcuts import get_object_or_404
 
 from .models import Event, EventSubscription
 
@@ -26,5 +27,5 @@ class EventSubscriptionCreateView(generic.edit.CreateView):
     success_url = reverse_lazy('events:list')
 
     def form_valid(self, form):
-        form.instance.event_id = self.kwargs['pk']
+        form.instance.event = get_object_or_404(Event, pk=self.kwargs['pk'], state=Event.STATE_PUBLISHED)
         return super().form_valid(form)
