@@ -38,4 +38,8 @@ The server has the following routes:
 - Published events page: `/events`
 - Published event's detail page: `/events/{id}`
 
-
+#### Run Tests
+Run the following command to run the tests:
+```shell script
+opnet-django-assigment/project$ python manage.py test events
+```
